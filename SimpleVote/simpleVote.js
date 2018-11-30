@@ -1,4 +1,4 @@
-let contractAddress = '0xF41Feb50Cc765A6d0c444f363999d5b73f070c02';
+let contractAddress = '0x71f6fb12c4266bf88db2ee642010c7d44fd94046';
 let abi =
 [
 	{
@@ -14,6 +14,21 @@ let abi =
 		"payable": true,
 		"stateMutability": "payable",
 		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "_totalToken",
+				"type": "uint256"
+			},
+			{
+				"name": "_tokenPrice",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
 	},
 	{
 		"constant": false,
@@ -32,21 +47,6 @@ let abi =
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"name": "_totalToken",
-				"type": "uint256"
-			},
-			{
-				"name": "_tokenPrice",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "constructor"
 	},
 	{
 		"constant": true,
