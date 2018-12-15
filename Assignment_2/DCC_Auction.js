@@ -414,12 +414,14 @@ function getProductInfo() {
 
   auctionBid.getHighestBid(function(e, r) {
     for (let i = 0; i < r.length; i++) {
+      alert("highest_" + productNames[i] + " : " + r[i].toString());
       $('#highest_' + productNames[i]).html(r[i].toString());
     }
   });
 
   auctionBid.getBid(function(e, r) {
     for(let i = 0; i < r.length; i++) {
+
       $('#myself_' + productNames[i]).html(r[i].toString());
     }
   });
