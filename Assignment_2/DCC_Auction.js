@@ -414,13 +414,13 @@ function getProductInfo() {
 
   auctionBid.getHighestBid(function(e, r) {
     for (let i = 0; i < r.length; i++) {
-      document.getElementById('highest_' + productNames[i]).innerHTML = r[i].toString();
+      $('#highest_' + productNames[i]).html(r[i].toString());
     }
   });
 
   auctionBid.getBid(function(e, r) {
     for(let i = 0; i < r.length; i++) {
-      document.getElementById('myself_' + productNames[i]).innerHTML = r[i].toString();
+      $('#myself_' + productNames[i]).html(r[i].toString());
     }
   });
 }
