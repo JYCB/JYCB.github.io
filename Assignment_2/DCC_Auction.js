@@ -310,10 +310,8 @@ let abi = [
 ];
 
 let auctionContract;
-let auctionVote;
-let accountAddresss;
-let currentEtherBalance;
-let currnetTokenBalance;
+let auctionBid;
+let accountAddress;
 let tokenPrice;
 
 window.addEventListener('load', function() {

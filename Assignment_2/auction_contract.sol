@@ -88,11 +88,6 @@ contract auctionVote {
         return uint(-1); 
     }
     
-    function getProductsInfo() view public returns (bytes32[])
-    {
-        return productNames;
-    }
-    
     function getTotalToken() view public returns(uint)
     {
         return totalToken;
