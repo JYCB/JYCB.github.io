@@ -40,16 +40,6 @@ contract auctionVote {
         balanceTokens -= tokensToBuy;
     }
     
-    function getProductNames() view public returns (bytes32, bytes32, bytes32, bytes32, bytes32, bytes32)
-    {
-        return (productNames[0],
-        productNames[1],
-        productNames[2],
-        productNames[3],
-        productNames[4],
-        productNames[5]);
-    }
-    
     function getBid() view public returns (uint, uint, uint, uint, uint, uint)
     {
         return (buyers[msg.sender].myBid["iphone7"],

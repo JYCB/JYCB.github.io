@@ -389,9 +389,10 @@ function getProductInfo() {
 }
 
 function buyTokens() {
-  let tokensToBuy = $("#buy").val();
+	let tokensToBuy = $("#buy").val();
   let price = tokensToBuy * tokenPrice;
-  $("#buy-msg").html("Purchase order has been submitted. Please wait.");
+	$("#buy-msg").html("Purchase order has been submitted. Please wait.");
+	$("#buy").val("");
 
   auctionBid.buy({value: web3.toWei(price, 'ether'), from: web3.eth.accounts[0]}, function(v) {
     web3.eth.getBalance(auctionBid.address, function(e, r) {
