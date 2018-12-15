@@ -407,6 +407,7 @@ function getTokenInfo() {
 }
 
 function getProductInfo() {
+  alert("here!!");
   let productNames;
   auctionBid.getProductNames(function(e, r) {
     productNames = r;
