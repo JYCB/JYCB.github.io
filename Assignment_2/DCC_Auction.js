@@ -1,4 +1,4 @@
-let contractAddress = "0xa2ae4d130231e900b8b1450b7f2532bc773cf24b";
+let contractAddress = "0x6c811b283a1365f0e33eba698a14ffdc1d44291d";
 let abi = [
 	{
 		"constant": false,
@@ -179,40 +179,6 @@ let abi = [
 			{
 				"name": "",
 				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getProductNames",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bytes32"
-			},
-			{
-				"name": "",
-				"type": "bytes32"
-			},
-			{
-				"name": "",
-				"type": "bytes32"
-			},
-			{
-				"name": "",
-				"type": "bytes32"
-			},
-			{
-				"name": "",
-				"type": "bytes32"
-			},
-			{
-				"name": "",
-				"type": "bytes32"
 			}
 		],
 		"payable": false,
