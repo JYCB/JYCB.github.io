@@ -407,7 +407,6 @@ function getTokenInfo() {
 }
 
 function getProductInfo() {
-  alert("here!!");
   let productNames;
   auctionBid.getProductNames(function(e, r) {
     productNames = r;
@@ -415,15 +414,13 @@ function getProductInfo() {
 
   auctionBid.getHighestBid(function(e, r) {
     for (let i = 0; i < r.length; i++) {
-      alert("highest_" + productNames[i] + " : " + r[i].toString());
-      $('#highest_' + productNames[i]).html(r[i].toString());
+      $('#highest_' + web3.toAscii(productNames[i])).html(r[i].toString());
     }
   });
 
   auctionBid.getBid(function(e, r) {
     for(let i = 0; i < r.length; i++) {
-
-      $('#myself_' + productNames[i]).html(r[i].toString());
+      $('#myself_' + web3.toAscii(productNames[i])).html(r[i].toString());
     }
   });
 }
@@ -458,8 +455,8 @@ function voteForProduct(prod_id) {
   }
 
   let myBid = Number($("#tb_" + prod).val());
-
-  $("#tb_" + prod).html("");
+	$("#tb_" + prod).val("");
+	
   auctionBid.vote(prod, myBid, function(e, r) {
     getProductInfo();
   });
