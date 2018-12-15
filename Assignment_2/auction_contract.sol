@@ -43,21 +43,21 @@ contract auctionVote {
     function getBid() view public returns (uint, uint, uint, uint, uint, uint)
     {
         return (buyers[msg.sender].myBid["iphone7"],
-        buyers[msg.sender].myBid["iphone8"],
-        buyers[msg.sender].myBid["iphoneX"],
-        buyers[msg.sender].myBid["galaxyS9"],
-        buyers[msg.sender].myBid["galaxyNote9"],
-        buyers[msg.sender].myBid["LGG7"]);
+                buyers[msg.sender].myBid["iphone8"],
+                buyers[msg.sender].myBid["iphoneX"],
+                buyers[msg.sender].myBid["galaxyS9"],
+                buyers[msg.sender].myBid["galaxyNote9"],
+                buyers[msg.sender].myBid["LGG7"]);
     }
     
     function getHighestBid() view public returns (uint, uint, uint, uint, uint, uint)
     {
         return (highestBid["iphone7"],
-        highestBid["iphone8"],
-        highestBid["iphoneX"],
-        highestBid["galaxyS9"],
-        highestBid["galaxyNote9"],
-        highestBid["LGG7"]);
+                highestBid["iphone8"],
+                highestBid["iphoneX"],
+                highestBid["galaxyS9"],
+                highestBid["galaxyNote9"],
+                highestBid["LGG7"]);
     }
     
     function vote(bytes32 productName, uint tokenBid) public
