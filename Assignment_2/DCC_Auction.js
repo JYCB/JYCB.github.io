@@ -407,20 +407,17 @@ function getTokenInfo() {
 }
 
 function getProductInfo() {
-  let productNames;
-  auctionBid.getProductNames(function(e, r) {
-    productNames = r;
-  })
+  let productNames = ["iphone7", "iphone8", "iphoneX", "galaxyS9", "galaxyNote9", "LGG7"];
 
   auctionBid.getHighestBid(function(e, r) {
     for (let i = 0; i < r.length; i++) {
-      $('#highest_' + web3.toAscii(productNames[i])).html(r[i].toString());
+      $('#highest_' + productNames[i]).html(r[i].toString());
     }
   });
 
   auctionBid.getBid(function(e, r) {
     for(let i = 0; i < r.length; i++) {
-      $('#myself_' + web3.toAscii(productNames[i])).html(r[i].toString());
+      $('#myself_' + productNames[i]).html(r[i].toString());
     }
   });
 }
